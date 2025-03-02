@@ -21,6 +21,7 @@ def Ai_action():
     available_moves = [pos for pos in Board if pos not in ['O', 'X']]
     randomizor = random.SystemRandom()
     ai_input= randomizor.choice(available_moves)
+    print(f"ai choosed: {ai_input}.")
     match (ai_input):
         case '1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9':
             i = Board.index(ai_input)
