@@ -2,14 +2,11 @@ import random
 Board = ['1','2','3','4','5','6','7','8','9']
 def playeraction():
     players_input = input("Type your coordinates\n")
-    try:
-        match (players_input):
-            case '1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9':
-                i = Board.index(players_input)
-                Board[i]='O'
-                Game_board()                
-    except ValueError:
-        print("not a valid coordinate.")
+    match (players_input):
+        case '1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9':
+            i = Board.index(players_input)
+            Board[i]='O'
+            Game_board()                
 
 def Game_board():        
     print(Board[0:3:1])
